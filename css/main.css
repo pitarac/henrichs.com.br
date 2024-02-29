@@ -2292,7 +2292,7 @@ img{
 	border-bottom:1px solid #ebebeb;
 }
 
-.Serviçoss-section .inner-container .Serviços-block:nth-child(4n + 0){
+.Serviçoss-section .inner-container .Serviços-block.Serviços-block:nth-child(4n + 0){
 	border-right:none;
 }
 
