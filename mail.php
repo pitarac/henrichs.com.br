@@ -1,16 +1,17 @@
 <?php
 
-    // Only process POST reqeusts.
+    // Only process POST requests.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["name"]));
-            $name = str_replace(array("\r","\n"),array(" "," "),$name);
+        $name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $phone = trim($_POST["phone"]);
         $subject = strip_tags(trim($_POST["subject"]));
         $message = trim($_POST["message"]);
 
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($subject) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($name) || empty($subject) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Preencha o formulário e tente novamente.";
@@ -22,11 +23,12 @@
         $recipient = "paulopitarac@gmail.com";
 
         // Set the email subject.
-        $subject = "Nova solicitação de Consultoria $name";
+        $subject = "Nova solicitação de Consultoria: $name";
 
         // Build the email content.
         $email_content = "Nome: $name\n";
-        $email_content .= "Email: $email\n\n";
+        $email_content .= "Email: $email\n";
+        $email_content .= "Telefone: $phone\n";
         $email_content .= "Assunto: $subject\n\n";
         $email_content .= "Mensagem:\n$message\n";
 
