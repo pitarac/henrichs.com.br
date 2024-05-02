@@ -20,7 +20,7 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "paulopitarac@gmail.com";
+        $recipient = "contato@henrichsconsultoria.com.br";
 
         // Set the email subject.
         $subject = "Nova solicitação de Consultoria: $name";
