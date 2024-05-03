@@ -1,5 +1,7 @@
 <?php
 
+ob_start(); // Inicia o buffer de saída
+
 // Only process POST requests.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form fields and remove whitespace.
@@ -58,5 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     http_response_code(403);
     echo "Houve um problema com seu envio. Tente novamente.";
 }
+
+ob_end_flush(); // Envia o buffer de saída e limpa o buffer
 
 ?>
