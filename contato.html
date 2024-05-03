@@ -210,34 +210,45 @@
 				
 				<div class="boxed-inner">
 					<!-- Contact Form -->
-					<div class="contact-form">
-						<!-- Contact Form -->
-						<form method="post" action="mail.php" id="contact-form">
-							<div class="row clearfix">
-								<div class="col-lg-4 col-md-6 col-sm-12 form-group">
-									<input type="text" name="name" placeholder="Name *" required>
-								</div>
+					<div class="consult-form">
+						<form method="post" action="mail.php">
 
-								<div class="col-lg-4 col-md-6 col-sm-12 form-group">
-									<input type="email" name="email" placeholder="Emaill Address *" required>
-								</div>
-
-								<div class="col-lg-4 col-md-12 col-sm-12 form-group">
-									<input type="text" name="subject" placeholder="Subject (Optional)" required>
-								</div>
-
-								<div class="col-lg-12 col-md-12 col-sm-12 form-group">
-									<textarea name="message" placeholder="Message"></textarea>
-								</div>
-
-								<div class="col-lg-12 col-md-12 col-sm-12 text-center form-group">
-									<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">Send Message</span></button>
-								</div>
-
+							<!--Form Group-->
+							<div class="form-group">
+								<label>Seu nome</label>
+								<input type="text" name="name" value="" placeholder="José W. " required>
+							</div>
+							<!--Form Group-->
+							<div class="form-group">
+								<label>Seu telefone</label>
+								<input type="text" name="phone" value="" placeholder="Digite seu número" required>
+							</div>
+							<!--Form Group-->
+							<div class="form-group">
+								<label>Seu email</label>
+								<input type="email" name="email" value="" placeholder="exemplo@dominio.com" required>
+							</div>
+							<!--Form Group-->
+							<div class="form-group">
+								<label>Assunto</label>
+								<select class="custom-select-box" name="subject">
+										<option value="">Escolha</option>
+										<option value="Acompanhamento Legislativo">Acompanhamento Legislativo</option>
+										<option value="Comunicação">Comunicação</option>
+										<option value="Acompanhamento Executivo">Acompanhamento Executivo</option>
+										<option value="Outros assuntos">Outros assuntos</option>
+								</select>
+							</div>
+							<!--Form Group-->
+							<div class="form-group">
+								<label>Conte um pouco mais</label>
+								<textarea name="message" placeholder="Escreva brevemente qual a sua nescessidade."></textarea>
+							</div>
+							<div class="form-group">
+								<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">Enviar a sua solicitação</span></button>
 							</div>
 						</form>
-						<p class="form-messege"></p>
-
+					
 					</div>
 					<!--End Contact Form -->
 				</div>
